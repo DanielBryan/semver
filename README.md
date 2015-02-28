@@ -2,6 +2,8 @@
 
 A [semver](http://semver.org) package for [go](https://golang.org).
 
+See [godoc](https://godoc.org/github.com/DanielBryan/semver) for the API.
+
 This package was designed to be as lightweight and simple as possible. It
 provides a single `Version` type:
 
@@ -30,7 +32,7 @@ inferred. For example:
 
 ## Usage
 
-See [godoc](https://godoc.org/github.com/DanielBryan/semver) for the full API documentation.
+See [godoc](https://godoc.org/github.com/DanielBryan/semver) for the API.
 
 Assuming familiarity with [how to write Go
 code](https://golang.org/doc/code.html):
