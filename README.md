@@ -1,8 +1,10 @@
-# semver
+# go-semver
+
+[![Build Status](https://travis-ci.org/ceralena/go-semver.svg?branch=master)](https://travis-ci.org/ceralena/go-semver)
 
 A [semver](http://semver.org) package for [go](https://golang.org).
 
-See [godoc](https://godoc.org/github.com/DanielBryan/semver) for the API.
+See [godoc](https://godoc.org/github.com/ceralena/go-semver) for the API.
 
 This package was designed to be as lightweight and simple as possible. It
 provides a single `Version` type:
@@ -20,7 +22,7 @@ The type has methods for comparison with other Version values: `Equals`, `Greate
 
 The package has a test suite with 100% coverage. To run the tests:
 
-	go test -v -cover github.com/DanielBryan/semver
+	go test -v -cover github.com/ceralena/go-semver
 
 ## Non-Standard Behaviour
 
@@ -32,16 +34,16 @@ inferred. For example:
 
 ## Usage
 
-See [godoc](https://godoc.org/github.com/DanielBryan/semver) for the API.
+See [godoc](https://godoc.org/github.com/ceralena/go-semver) for the API.
 
 Assuming familiarity with [how to write Go
 code](https://golang.org/doc/code.html):
 
-To get the package, run `go get github.com/DanielBryan/semver`, or
+To get the package, run `go get github.com/ceralena/go-semver`, or
 just add it to the imports for your package:
 
 ```go
-import "github.com/DanielBryan/semver"
+import "github.com/ceralena/go-semver"
 ```
 
 To parse a version string:
