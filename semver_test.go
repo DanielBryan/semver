@@ -68,10 +68,12 @@ func TestGreaterThan(t *testing.T) {
 		{Version{1, 2, 4, "beta"}, Version{1, 2, 3, "beta"}, true},
 		{Version{1, 2, 3, "c"}, Version{1, 2, 3, "beta"}, true},
 		{Version{1, 2, 3, "z"}, Version{1, 2, 3, "foo"}, true},
+		{Version{Major: 4}, Version{3, 6, 1, ""}, true},
 
 		// lesser
 		{Version{0, 0, 1, "foo"}, Version{0, 0, 1, "z"}, false},
 		{Version{0, 0, 1, "foo"}, Version{0, 0, 2, "foo"}, false},
+		{Version{3, 6, 1, ""}, Version{Major: 4}, false},
 	}
 
 	for _, tc := range tests {
@@ -103,10 +105,12 @@ func TestLessThan(t *testing.T) {
 		{Version{1, 2, 4, "beta"}, Version{1, 2, 3, "beta"}, false},
 		{Version{1, 2, 3, "c"}, Version{1, 2, 3, "beta"}, false},
 		{Version{1, 2, 3, "z"}, Version{1, 2, 3, "foo"}, false},
+		{Version{Major: 4}, Version{3, 6, 1, ""}, false},
 
 		// lesser
 		{Version{0, 0, 1, "foo"}, Version{0, 0, 1, "z"}, true},
 		{Version{0, 0, 1, "foo"}, Version{0, 0, 2, "foo"}, true},
+		{Version{3, 6, 1, ""}, Version{Major: 4}, true},
 	}
 
 	for _, tc := range tests {

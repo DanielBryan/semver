@@ -55,12 +55,12 @@ func (v Version) String() string {
 
 // Returns true if v is a higher version than o.
 func (v Version) GreaterThan(o Version) bool {
-	if v.Major > o.Major {
-		return true
-	} else if v.Minor > o.Minor {
-		return true
-	} else if v.Patch > o.Patch {
-		return true
+	if v.Major != o.Major {
+		return v.Major > o.Major
+	} else if v.Minor != o.Minor {
+		return v.Minor > o.Minor
+	} else if v.Patch != o.Patch {
+		return v.Patch > o.Patch
 	} else if v.Prerelease == o.Prerelease {
 		return false
 	}
