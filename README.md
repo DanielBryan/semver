@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/ceralena/go-semver.svg?branch=master)](https://travis-ci.org/ceralena/go-semver)
 
+[![codecov](https://codecov.io/gh/ceralena/go-semver/branch/master/graph/badge.svg)](https://codecov.io/gh/ceralena/go-semver)
+
 A [semver](http://semver.org) package for [go](https://golang.org).
 
 See [godoc](https://godoc.org/github.com/ceralena/go-semver) for the API.
