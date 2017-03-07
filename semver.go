@@ -53,7 +53,7 @@ func (v Version) String() string {
 	}
 }
 
-// Returns true if v is a higher version than o.
+// GreaterThan returns true if v is a higher version than o.
 func (v Version) GreaterThan(o Version) bool {
 	if v.Major != o.Major {
 		return v.Major > o.Major
@@ -73,12 +73,12 @@ func (v Version) GreaterThan(o Version) bool {
 	return true
 }
 
-// Returns true if v is a lesser version than o.
+// LessThan returns true if v is a lesser version than o.
 func (v Version) LessThan(o Version) bool {
 	return !v.Equals(o) && !v.GreaterThan(o)
 }
 
-// Returns true if v and o are the same version.
+// Equals returns true if v and o are the same version.
 func (v Version) Equals(o Version) bool {
 	return v.Major == o.Major && v.Minor == o.Minor && v.Patch == o.Patch && v.Prerelease == o.Prerelease
 }
@@ -102,7 +102,8 @@ var (
 	IllegalVersion = errors.New("Illegal version string")
 )
 
-// Parse a version value from its string representation.
+// Parse takes the string representation of a version and returns a Version
+// value if is valid.
 //
 // The error value will either be nil, EmptyVersion or IllegalVersion.
 func Parse(s string) (Version, error) {
