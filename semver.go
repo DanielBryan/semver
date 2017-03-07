@@ -15,7 +15,7 @@
 //    }
 //    fmt.Println(v)
 //
-// Visit godoc.org/github.com/DanielBryan/semver for the full package API.
+// Visit godoc.org/github.com/ceralena/semver for the full package API.
 package semver
 
 import (
