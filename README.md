@@ -67,7 +67,7 @@ b := semver.Version{4, 2, 3, "rc.1"}
 
 a.Equals(b) // false
 a.GreaterThan(b) // false
-a.LessThen(b) // true
+a.LessThan(b) // true
 ```
 
 Printing the `Version` type will produce a standard semver string:
